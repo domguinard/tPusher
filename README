@@ -1,0 +1,18 @@
+tPusher demo project showing how HTML5 Websockets can be used to push data to mobile phones in a Web of Things context. Heavily based on the Java Atmosphere framework (a great push abstraction framework), JQuery and Sencha Touch.
+
+The project is best run with Maven and is working quite well with Jetty >8.0.0.M2. Should work as well with the latest releases of Grizzly.
+
+The idea is that an EPC standard RFID reader is pushing RFID reads directly to a mobile phone.
+To test it without an actual RFID reader do:
+
+1) Browse to (with a WebKit browser, including mobile ones):
+http://<YOU_APP_SERVER_ADDRESS>:<PORT>/monitor/ui/mobile.html?reader=gate
+
+2) Use Poster or curl to push the following JSON message:
+message={"reportName": "hello", "niceTime": "18:50:26", "epcs": ["25.23.22", "25.23.34"]}
+To: http://<YOU_APP_SERVER_ADDRESS>:<PORT>/things-pusher/pubsub/gate
+
+Check http://youtu.be/6JxAdXSza-g for a tutorial video of what this demo is about and how to run it.
+
+www.guinard.org
+www.webofthings.com
