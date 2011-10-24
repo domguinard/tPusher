@@ -8,7 +8,7 @@ To test it without an actual RFID reader do:
 1) Browse to (with a WebKit browser, including mobile ones):
 http://YOU_APP_SERVER_ADDRESS:PORT/monitor/ui/mobile.html?reader=gate
 
-2) Use Poster or curl to push the following JSON message:
+2) Use Poster or curl to push (POST) the following JSON message:
 message={"reportName": "hello", "niceTime": "18:50:26", "epcs": ["25.23.22", "25.23.34"]}
 To: http://YOU_APP_SERVER_ADDRESS:PORT/things-pusher/pubsub/gate
 
